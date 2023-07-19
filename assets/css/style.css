@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@keyframes fadeIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+
+@keyframes animateTop {
+    25% {
+      width: 100%;
+      opacity: 1;
+    }
+  
+    30%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes animateBottom {
+    0%,
+    50% {
+      opacity: 0;
+      width: 0;
+    }
+  
+    75% {
+      opacity: 1;
+      width: 100%;
+    }
+  
+    76%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes animateRight {
+    0%,
+    25% {
+      opacity: 0;
+      height: 0;
+    }
+  
+    50% {
+      opacity: 1;
+      height: 100%;
+    }
+  
+    55%,
+    100% {
+      height: 100%;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes animateLeft {
+    0%,
+    75% {
+      opacity: 0;
+      bottom: 0;
+      height: 0;
+    }
+  
+    100% {
+      opacity: 1;
+      height: 100%;
+    }
+  }
+  
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --main-color:#8e44ad;
+    --black:#222;
+    --blue-ocean: #2323fc;
+    --white:#fff;
+    --light-black:#777;
+    --light-white:#fff9;
+    --dark-dg: rgba(0,0,0,.7);
+    --light-bg:#eee;
+    --border:.1rem solid var(--black);
+    --border-top: .5rem solid var(--blue-ocean);
+    --box-shadow:0 4rem 1rem rgba(0,0,0, .1);
+    --box-shadow-2:0 3rem 1rem rgba(8, 8, 8, 0.1);
+    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+}
+
+*{ 
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+ 
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+section{
+    padding: 5rem 10%;
+}
+
+.btn{
+    display: inline;
+    background: var(--black);
+    margin-top: 1rem;
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: var(--main-color);
+}
+
+.heading-title{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 6rem;
+    text-transform: uppercase;
+    color:var(--black);
+}
+
+.header{
+    position: sticky;
+    top: 0; left: 0; right: 0; 
+    z-index: 1000;
+    background-color: var(--white);
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: .2rem;
+    /*box-shadow: var(--box-shadow);*/
+    
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerLong{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    display: flex;
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+    border-top: var(--border-top);
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.header .navbar a{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    color: var(--black);
+    font-weight: bold;
+}
+
+.headerLong .navbarLong a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--black);
+}
+
+.headerLong .navbarLong{
+    font-size: 1.5rem;
+    margin-left: -2rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+}
+
+#menu-btn1{
+    font-size:2.5rem;
+    cursor:pointer;
+    color: var(--black);
+    display: none;
+}
+
+#menu-btn2{
+    font-size:2.5rem;
+    cursor:pointer;
+    color: var(--black);
+    display: none;
+}
+
+
+
+.home{
+    padding: 0;
+    background: #002b4f;
+}
+
+.home .slide{
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: cover !important;
+    min-height: 60rem;
+}
+
+.home .slide .content{
+    width: 85rem;
+    display: non;
+}
+
+.home .slide .content span{
+    display: block;
+    font-size: 2.2rem;
+    color: var(--light-white);
+    padding-bottom: 1rem;
+    animation: fadeIn .2s linear backwards .2s;
+}
+
+
+
+.home .slide .content h3{
+    font-size: 6vw;
+    color: var(--white);
+    line-height: 1;
+    text-shadow: var(--text-shadow);
+    padding: 1rem 0;
+    animation: fadeIn .2s linear backwards .4s;
+}
+
+.home .slide .content .btn{
+    animation: fadeIn .2s linear backwards .4s;
+}
+
+
+.profile{
+   /*background: #002b4f;*/
+    background: url(https://th.bing.com/th/id/R.5a141a2eaa8971fd5d114d19471c9bc3?rik=19%2fChSTc8qGfxw&riu=http%3a%2f%2fwww.pcgeeksusa.com%2fwp-content%2fuploads%2f2018%2f07%2fdata-recovery.jpg&ehk=0N0oz7lxmpZRYe5qxsWn37oCYU55I%2bRA7Hd4BatB83Q%3d&risl=&pid=ImgRaw&r=0) no-repeat;
+  
+}
+
+
+.profile h2{
+    color: var(--white);
+}
+
+.profile h4{
+    color: var(--white);
+    font-size: 1.7rem;
+}
+
+.profile .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+}
+
+.profile .box-container .profile{
+    padding: 3rem 3rem;
+    text-align: center;
+    border: .5rem dashed #054477;
+    border-radius: 0px 50px 0px 10px;
+    background: transparent;
+    box-shadow: var(--box-shadow-2);
+}
+
+.profile .box-container .profile .card {
+    position: relative;
+    font-weight: bold;
+    color: #1e1e1e;
+    background: transparent;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 49, 49, 0.5);
+    border-right: 1px solid rgba(0, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(57, 255, 20, 0.5);
+    border-left: 1px solid rgba(255, 255, 113, 0.5);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+    
+  }
+  .profile .box-container .profile .card span {
+    position: absolute;
+    border-radius: 100vmax;
+  }
+
+  
+.top {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: linear-gradient(
+      90deg,
+      transparent 50%,
+      rgba(255, 49, 49, 0.5),
+      rgb(255, 49, 49)
+    );
+  }
+  
+  .bottom {
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background: linear-gradient(
+      90deg,
+      rgb(57, 255, 20),
+      rgba(57, 255, 20, 0.5),
+      transparent 50%
+    );
+  }
+  
+  .right {
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 0;
+    background: linear-gradient(
+      180deg,
+      transparent 30%,
+      rgba(0, 255, 255, 0.5),
+      rgb(0, 255, 255)
+    );
+  }
+  
+  .left {
+    left: 0;
+    bottom: 0;
+    width: 5px;
+    height: 0;
+    background: linear-gradient(
+      180deg,
+      rgb(255, 255, 113),
+      rgba(255, 255, 113, 0.5),
+      transparent 70%
+    );
+  }
+  
+  .top {
+    animation: animateTop 3s ease-in-out infinite;
+  }
+  
+  .bottom {
+    animation: animateBottom 3s ease-in-out infinite;
+  }
+  
+  .right {
+    animation: animateRight 3s ease-in-out infinite;
+  }
+  
+  .left {
+    animation: animateLeft 3s ease-in-out infinite;
+  }
+  
+
+.profile .box-container .box-picture{
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 0px 50px 0px 10px;
+    display: inline;
+}
+
+
+.profile .box-picture .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+}
+.profile .box-picture .box-container  .box img{
+    height: 30rem;
+    border-bottom: 1rem dashed #054477;
+    border-radius: 500px 500px 500px 500px;
+}
+
+.profile .box-picture .box-container .box{
+   
+    color: var(--white);
+    font-size: 2rem;
+    animation: fadeIn .7s linear backwards .5s;
+}
+
+.profile .box-picture .box-container .box h3{
+    padding: 2rem 2rem;
+    margin-top: 6rem;
+}
+
+.profile .box-picture .box-container .box h3 span{
+    color: var(--white);
+    padding-top: 3rem;
+    font-size: 2rem;
+    animation: 4s linear 2s infinite alternate fadeIn;
+}
+
+.profile .box-picture .box-container h3 #name{
+    color: #d9dbdd;
+    font-weight: lighter;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.profile .box-picture .box-container h3 #profission{
+    margin-bottom: 3rem;
+}
+
+.profile .box-picture .box-container .box h3 span a{
+    margin-top: 4rem;
+}
+
+.profile .detail{
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+    
+}
+
+.services .box-container .box{
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.services .box-container .box:hover{
+    background: var(--black);
+    
+}
+
+.services .box-container .box img{
+    height: 10rem;
+}
+
+.services .box-container .box h3{
+    color: var(--white);
+    font-size: 1.7rem;
+    padding-top: 1rem;
+}
+
+
+.footer{
+    background: url("https://t4.ftcdn.net/jpg/05/00/76/75/360_F_500767502_AdezwSUsyb04l79RpV6zubKulRnIHpd0.jpg") no-repeat;
+    /*background: #1f2e59;*/
+    background-size: cover;
+    background-position: center;
+    /*background-attachment: fixed;*/
+}
+
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:3rem;
+}
+
+.footer .box-container .box h3{
+    color: var(--white);
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footer .box-container .box a{
+    color: var(--light-white);
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.footer .box-container .box a{
+    color: var(--light-white);
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
+    display: block;
+}
+
+.footer .box-container .box a i{
+    color: var(--main-color);
+    padding-right: .5rem;
+    transition: .2s linear;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: .1rem solid var(--light-white);
+    font-size: 2rem;
+    color: var(--white);
+}
+
+
+.footer .credit span{
+    color: var(--main-color);
+    
+}
+
+.heading{
+    background: url(https://wallpaperaccess.com/full/1078215.jpg) no-repeat;
+}
+
+/* Media queries */
+
+@media (max-width:1200px){
+    section{
+        padding: 3rem 5%;
+    }
+}
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+
+    section{
+        padding: 3rem 3rem;
+    }
+}
+
+@media (max-width:768px){
+
+    #menu-btn1, #menu-btn1{
+        display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-btn2, #menu-btn2{
+        display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-btn1 .fa-times{
+        transform: rotate(180deg);
+    }
+
+    #menu-btn2 .fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 99%; left: 0; right:0;
+        background-color: var(--white);
+        border-top: var(--border);
+        padding: 2rem;
+        transition: .2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        
+    }
+
+    .headerLong .navbarLong{
+        position: absolute;
+        top: 99%; left: 0; right:0;
+        background-color: var(--white);
+        border-top: var(--border);
+        padding: 2rem;
+        transition: .2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .headerLong .navbarLong.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a{
+        display: block;
+        margin: 2rem;
+        text-align: center;
+    }
+
+    .headerLong .navbarLong a{
+        display: block;
+        margin: 2rem;
+        text-align: center;
+    }
+    
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    .heading-title{
+        font-size: 3.5rem;
+    }
+}
