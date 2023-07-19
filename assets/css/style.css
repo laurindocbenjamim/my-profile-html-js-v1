@@ -181,6 +181,7 @@ section{
 .header .logo{
     font-size: 2.5rem;
     color: var(--black);
+    font-weight: bold;
 }
 
 .header .navbar a{
