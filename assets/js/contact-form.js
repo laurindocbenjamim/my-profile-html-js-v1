@@ -16,5 +16,10 @@ form.addEventListener('submit', function(e){
         message: message.value
     };
 
-    alert(data)
+    alert(
+        "Name: "+data.name +
+        " Email: "+data.email +
+        " Subject: "+data.subject +
+        " Message: "+data.message  
+    );
 });
