@@ -103,13 +103,14 @@
     box-sizing: border-box;
     outline: none; border: none;
     text-decoration: none;
-    text-transform: capitalize;
 }
 
  
 html{
     font-size: 62.5%;
     overflow-x: hidden;
+    background: #131417;
+    color: var(--white);
 }
 
 html::-webkit-scrollbar{
@@ -136,6 +137,7 @@ section{
     font-size: 1.7rem;
     padding: 1rem 3rem;
     cursor: pointer;
+    
 }
 
 .btn:hover{
@@ -145,62 +147,44 @@ section{
 .heading-title{
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 6rem;
-    text-transform: uppercase;
-    color:var(--black);
+    font-size: 4rem;
+    text-transform: capitalize;
+    font-family: 'Chalkduster', sans-serif;
+    color:#d9dbdd;
+    border-top: .1rem solid #eee;
 }
 
 .header{
     position: sticky;
     top: 0; left: 0; right: 0; 
     z-index: 1000;
-    background-color: var(--white);
+    background-color: #1E1F27;
     display: flex;
-    padding-top: 1rem;
-    padding-bottom: .2rem;
-    /*box-shadow: var(--box-shadow);*/
-    
-    align-items: center;
-    justify-content: space-between;
-}
-
-.headerLong{
-    position: sticky;
-    top: 0; left: 0; right: 0;
-    z-index: 1000;
-    background-color: var(--white);
-    display: flex;
-    padding-top: 8rem;
-    padding-bottom: 2rem;
-    border-top: var(--border-top);
+    padding-top: 4rem;
+    padding-bottom: .1rem;
     box-shadow: var(--box-shadow);
     align-items: center;
     justify-content: space-between;
 }
 
+
 .header .logo{
     font-size: 2.5rem;
-    color: var(--black);
+    color: var(--white);
     font-weight: bold;
+    font-family: 'Chalkduster', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.header .logo img{
+    max-height: 6rem;
 }
 
 .header .navbar a{
     font-size: 1.5rem;
     margin-left: 2rem;
-    color: var(--black);
+    color: var(--white);
     font-weight: bold;
-}
-
-.headerLong .navbarLong a{
-    font-size: 2rem;
-    margin-left: 2rem;
-    color: var(--black);
-}
-
-.headerLong .navbarLong{
-    font-size: 1.5rem;
-    margin-left: -2rem;
-    color: var(--black);
 }
 
 .header .navbar a:hover{
@@ -210,17 +194,9 @@ section{
 #menu-btn1{
     font-size:2.5rem;
     cursor:pointer;
-    color: var(--black);
+    color: var(--white);
     display: none;
 }
-
-#menu-btn2{
-    font-size:2.5rem;
-    cursor:pointer;
-    color: var(--black);
-    display: none;
-}
-
 
 
 .home{
@@ -228,52 +204,22 @@ section{
     background: #002b4f;
 }
 
-.home .slide{
-    text-align: center;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover !important;
-    background-position: cover !important;
-    min-height: 60rem;
-}
-
-.home .slide .content{
-    width: 85rem;
-    display: non;
-}
-
-.home .slide .content span{
-    display: block;
-    font-size: 2.2rem;
-    color: var(--light-white);
-    padding-bottom: 1rem;
-    animation: fadeIn .2s linear backwards .2s;
-}
-
-
-
-.home .slide .content h3{
-    font-size: 6vw;
-    color: var(--white);
-    line-height: 1;
-    text-shadow: var(--text-shadow);
-    padding: 1rem 0;
-    animation: fadeIn .2s linear backwards .4s;
-}
-
-.home .slide .content .btn{
-    animation: fadeIn .2s linear backwards .4s;
-}
 
 
 .profile{
-   /*background: #002b4f;*/
-    background: url(https://th.bing.com/th/id/R.5a141a2eaa8971fd5d114d19471c9bc3?rik=19%2fChSTc8qGfxw&riu=http%3a%2f%2fwww.pcgeeksusa.com%2fwp-content%2fuploads%2f2018%2f07%2fdata-recovery.jpg&ehk=0N0oz7lxmpZRYe5qxsWn37oCYU55I%2bRA7Hd4BatB83Q%3d&risl=&pid=ImgRaw&r=0) no-repeat;
+   background: #131417;
+    /*background: url(https://th.bing.com/th/id/R.5a141a2eaa8971fd5d114d19471c9bc3?rik=19%2fChSTc8qGfxw&riu=http%3a%2f%2fwww.pcgeeksusa.com%2fwp-content%2fuploads%2f2018%2f07%2fdata-recovery.jpg&ehk=0N0oz7lxmpZRYe5qxsWn37oCYU55I%2bRA7Hd4BatB83Q%3d&risl=&pid=ImgRaw&r=0) no-repeat;
+    */
   
 }
 
+.profile h1{
+    color: var(--white);
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'Chalkduster';
+    
+}
 
 .profile h2{
     color: var(--white);
@@ -293,16 +239,15 @@ section{
 .profile .box-container .profile{
     padding: 3rem 3rem;
     text-align: center;
-    border: .5rem dashed #054477;
     border-radius: 0px 50px 0px 10px;
-    background: transparent;
-    box-shadow: var(--box-shadow-2);
+    background: #1E1F27;
+    box-shadow: var(--box-shadow);
 }
 
 .profile .box-container .profile .card {
     position: relative;
-    font-weight: bold;
-    color: #1e1e1e;
+    font-weight: normal;
+    color: var(--white);
     background: transparent;
     overflow: hidden;
     border-top: 1px solid rgba(255, 49, 49, 0.5);
@@ -317,10 +262,25 @@ section{
     padding: 1em;
     
   }
-  .profile .box-container .profile .card span {
+.profile .box-container .profile .card span {
     position: absolute;
     border-radius: 100vmax;
-  }
+}
+
+.profile .box-container .profile .card a{
+    padding: 1rem .1rem;
+    margin-top: 1rem;
+    min-width: 40%;
+    color: #d9dbdd;
+    border: .2rem solid #fdfdfd;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+}
+
+.profile .box-container .profile .card a:hover{
+    background: #1d2977;
+    font-size: 1.6rem;
+}
 
   
 .top {
@@ -392,10 +352,10 @@ section{
   
 
 .profile .box-container .box-picture{
-    padding: 3rem 2rem;
+    padding: 4rem 3rem;
     text-align: center;
     border-radius: 0px 50px 0px 10px;
-    display: inline;
+    /*display: inline;*/
 }
 
 
@@ -403,23 +363,40 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     gap: 1.5rem;
+    padding-bottom:2rem 1rem;
 }
-.profile .box-picture .box-container  .box img{
-    height: 30rem;
-    border-bottom: 1rem dashed #054477;
+.profile .box-picture .box-container img{
+    position: relative;
+    height: 20rem;
+    background: #1E1F27;
+    border-bottom: .3rem dashed #1a3bf7;
     border-radius: 500px 500px 500px 500px;
+    box-shadow: var(--box-shadow);
 }
 
 .profile .box-picture .box-container .box{
-   
     color: var(--white);
     font-size: 2rem;
     animation: fadeIn .7s linear backwards .5s;
 }
 
+.profile .box-picture .box-container .box a{
+    padding: 1.5rem .7rem;
+    min-width: 60%;
+    color: #d9dbdd;
+    border: .2rem solid #ffffff;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+}
+
+.profile .box-picture .box-container .box a:hover{
+    background: #1d2977;
+    font-size: 1.6rem;
+}
+
 .profile .box-picture .box-container .box h3{
-    padding: 2rem 2rem;
-    margin-top: 6rem;
+    /*padding: 2rem 2rem;
+    margin-top: 6rem;*/
 }
 
 .profile .box-picture .box-container .box h3 span{
@@ -437,6 +414,7 @@ section{
 }
 
 .profile .box-picture .box-container h3 #profission{
+    font-size: 3.5rem;
     margin-bottom: 3rem;
 }
 
@@ -450,6 +428,130 @@ section{
 }
 
 
+
+.skills{
+    background: #131417;
+     /*background: url(https://th.bing.com/th/id/R.5a141a2eaa8971fd5d114d19471c9bc3?rik=19%2fChSTc8qGfxw&riu=http%3a%2f%2fwww.pcgeeksusa.com%2fwp-content%2fuploads%2f2018%2f07%2fdata-recovery.jpg&ehk=0N0oz7lxmpZRYe5qxsWn37oCYU55I%2bRA7Hd4BatB83Q%3d&risl=&pid=ImgRaw&r=0) no-repeat;
+     */
+   
+ }
+ 
+ .skills h1{
+     color: var(--white);
+     font-size: 3rem;
+     text-transform: uppercase;
+     font-family: 'Chalkduster';
+ }
+ 
+ .skills h2{
+     color: var(--white);
+ }
+ 
+ .skills h4{
+     color: var(--white);
+     font-size: 1.7rem;
+ }
+ 
+ .skills .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+    padding-bottom:2rem 1rem;
+ }
+ 
+ .skills .box-container .profile{
+     padding: 3rem 3rem;
+     text-align: center;
+     border-radius: 0px 50px 0px 10px;
+     background: #1E1F27;
+     
+ }
+ 
+ .skills .box-container .profile .card {
+    border-radius: 20px 0px 10px 0px;
+     position: relative;
+     font-weight: normal;
+     color: #bbbbbb;
+     background: #0b0b0b;
+     overflow: hidden;
+     font-family: sans-serif;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+     padding: 1em;
+     box-shadow: 0 4rem 1rem rgba(0,0,0, .2);
+     
+}
+ .skills .box-container .profile .card span {
+     position: absolute;
+     border-radius: 100vmax;
+     text-shadow: 0 1.5rem 3rem rgba(0,0,0,.3);
+ }
+ 
+ 
+
+ .skills .box-container .box-picture{
+    padding: 4rem 3rem;
+    text-align: center;
+    border-radius: 0px 50px 0px 10px;
+    box-shadow: 0 4rem 1rem rgba(0,0,0, .2);
+    /*display: inline;*/
+}
+
+.skills .box-picture .box-container .box{
+    color: #bbbbbb;
+    font-size: 2rem;
+}
+
+.skills .box-picture .box-container .box h3 span{
+    color: #bbbbbb;
+    padding-top: 3rem;
+    font-size: 2rem;
+    border: .1rem solid rgba(72, 113, 247);
+    box-shadow: 0 4rem 1rem rgba(0,0,0, .2);
+}
+
+.skills .box-picture .box-container h3 #name{
+    color: #d9dbdd;
+    font-weight: lighter;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.skills .box-picture .box-container h3 #profission{
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.skills .detail{
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+
+.services .box-container .box {
+    
+    background: transparent;
+    
+    border-top: 1px solid rgba(255, 49, 49, 0.5);
+    border-right: 1px solid rgba(0, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(57, 255, 20, 0.5);
+    border-left: 1px solid rgba(255, 255, 113, 0.5);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    
+    
+  }
+  .services .box-container .box span {
+    position: absolute;
+    border-radius: 100vmax;
+  }
+
+
 .services .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
@@ -460,7 +562,7 @@ section{
 .services .box-container .box{
     padding: 3rem 2rem;
     text-align: center;
-    background: var(--main-color);
+    background: #2C303A;
     cursor: pointer;
 }
 
@@ -481,8 +583,8 @@ section{
 
 
 .footer{
-    background: url("https://t4.ftcdn.net/jpg/05/00/76/75/360_F_500767502_AdezwSUsyb04l79RpV6zubKulRnIHpd0.jpg") no-repeat;
-    /*background: #1f2e59;*/
+    /*background: url("https://t4.ftcdn.net/jpg/05/00/76/75/360_F_500767502_AdezwSUsyb04l79RpV6zubKulRnIHpd0.jpg") no-repeat;*/
+    background: #1E1F27;
     background-size: cover;
     background-position: center;
     /*background-attachment: fixed;*/
@@ -503,16 +605,12 @@ section{
 
 .footer .box-container .box a{
     color: var(--light-white);
-    font-size: 2.5rem;
-    padding-bottom: 2rem;
-}
-
-.footer .box-container .box a{
-    color: var(--light-white);
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-bottom: 1.5rem;
     display: block;
 }
+
+
 
 .footer .box-container .box a i{
     color: var(--main-color);
@@ -542,6 +640,11 @@ section{
 .heading{
     background: url(https://wallpaperaccess.com/full/1078215.jpg) no-repeat;
 }
+
+
+
+
+
 
 /* Media queries */
 
@@ -586,6 +689,7 @@ section{
         top: 99%; left: 0; right:0;
         background-color: var(--white);
         border-top: var(--border);
+        color: --;
         padding: 2rem;
         transition: .2s linear;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);

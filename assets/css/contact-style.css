@@ -40,9 +40,6 @@
     gap: 1.5rem;
 }
 
-.booking .book-form .container{
-    
-}
 
 .booking .book-form .flex{
     display: flex;
@@ -66,7 +63,8 @@
 
 .booking .book-form .flex .inputBox textarea{
     width: 100%;
-    padding:  1.2rem 1.4rem;
+    height: 50%;
+    padding:  1rem 1rem;
     font-size: 1.6rem;
     color: var(--light-black);
     text-transform: none;
@@ -102,5 +100,4 @@
 }
 .booking .book-form .btn{
     min-width: 20%;
-    margin: 2rem;
 }
