@@ -689,9 +689,9 @@ section{
     .header .navbar{
         position: absolute;
         top: 99%; left: 0; right:0;
-        background-color: var(--white);
+        background-color: #1E1F27;
         border-top: var(--border);
-        color: --;
+        color: #d9dbdd;
         padding: 2rem;
         transition: .2s linear;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
