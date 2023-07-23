@@ -25,15 +25,17 @@ window.alert = function(message, timeout=null,type=null){
     `   position:fixed;
         top:${top}%;
         left:${left}%;
+        min-width:30rem;
+        max-width:50rem;
         padding:20px;
         display:flex;
         flex-direction:column;
         font-size:1.5rem;
         color:#252526;
-        background:#E5E5E5;
+        background:#fff;
         border: .2rem solid #${borderMessageColor};
-        border-radius:10px;
-        box-shadow: 0 10px 5px 0 #00000022;
+        border-radius:4px;
+        box-shadow: 0 2px 1px 0 #00000022;
         transform: translateX(-50%);
         text-transform:none;
     `);
@@ -41,7 +43,7 @@ window.alert = function(message, timeout=null,type=null){
     alertButtom.setAttribute('style',`
     border: 1px solid #${borderMessageColor};
     background: white;
-    border-radius: 5px;
+    border-radius: 2px;
     max-width:50px;
     padding: 5px;
     cursor:pointer;

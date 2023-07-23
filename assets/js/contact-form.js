@@ -7,14 +7,20 @@ let Isubject = document.querySelector('#subject');
 let Imessage = document.querySelector('#message');
 
 let register = (data)=>{
-    fetch("http://localhost:8080/register",{
+    fetch("http://localhost:8080/message",{
         headers: {
             "Content-Type": "application/json",
         },
         method: "POST",
         body: JSON.stringify(data)
     }).then((e)=>{
-        alert("Message sent successfull.", 6000, 'success');
+        
+        console.log(e)
+        if(e.status == 200){
+            clearFields();
+            alert("Message sent successfull.", 6000, 'success');
+        }
+       
     }).catch((e)=>{
         alert("Failed to send message.", null, 'error');
     }).finally(()=>{
@@ -39,13 +45,4 @@ eventForm.addEventListener('submit', function(e){
     };
 
     register(data);
-
-    /*alert(
-        "Name: "+data.name +
-        " Email: "+data.email +
-        " Subject: "+data.subject +
-        " Message: "+data.message, 6000, 'success'
-    );*/
-
-    clearFields();
 });

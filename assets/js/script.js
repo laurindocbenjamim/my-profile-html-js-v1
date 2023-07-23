@@ -1,39 +1,46 @@
 
-let menu = document.querySelector('#menu-btn1');
-let menu2 = document.querySelector('#menu-btn2');
-let navbar = document.querySelector('.header .navbar');
-let navbarLong = document.querySelector('.headerLong .navbarLong');
-let headerLong = document.querySelector('.headerLong');
+
+$(document).ready(function(){
+    $('#menu').click(function(){
+       
+        $(this).toggleClass('fa-times');
+        $('header').toggleClass('toggle');
+    });
+
+    $(window).on('scroll load', function(){
+        $('#menu').removeClass('fa-times');
+        $('header').remove('toggle');
+
+        if( $(window).scrollTop() > 0){
+            $('.top').show();
+        }else{
+            $('.top').hide();
+        }
+    });
+
+    //Smooth scrolling
+
+    $('a[href*="#"]').on('click', function(e){
+        e.preventDefault();
+
+        $('html, body').animate({
+            scrollTop : $($(this).attr('href')).offset().top,
+
+        },
+            500,
+            'linear'
+        );
+    });
+})
+
+
+/*let menu = document.querySelector('#menu');
+let navbar = document.querySelector('.navbar');
 
 let i =0;
-menu.onclick = () => {
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
-    i++;
-    if(i==1){
-        headerLong.style.display = "none";
-    }else if(i == 2){
-        i = 0;
-        headerLong.style.display = "inline-block";
-    }
-};
-
-menu2.onclick = () =>{
-    menu2.classList.toggle('fa-times');
-    navbarLong.classList.toggle('active');
-}
-
-window.onscroll = () =>{
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('active');
-};
+menu.onclick = () => { alert("Ola")
+    menu.classList.toggle();
+    navbar.classList.toggle();
+};*/
 
 
-    var swiper = new Swiper(".home-slider", {
-        loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  
