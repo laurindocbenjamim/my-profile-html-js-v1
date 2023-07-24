@@ -50,6 +50,9 @@ body{
     padding-left: 35rem;
 }
 
+a{
+    color: var(--white);
+}
 section{
     min-height: 100vh;
     padding: 1rem;
