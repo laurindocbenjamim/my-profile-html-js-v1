@@ -1,6 +1,6 @@
 
 window.alert = function(message, timeout=null,type=null){
-    let top = 22;
+    let top = 13;
     let left = 50;
     let borderMessageColor = '0f52d8';
 
@@ -20,17 +20,15 @@ window.alert = function(message, timeout=null,type=null){
     alertButtom.innerHTML = `OK`;
 
     alert.classList.add('alert');
+    alert.className = 'alert alert-primary';
     alert.setAttribute
     ('style',
-    `   position: fixed;
-        margin-left: auto;
+    `   position: absolute;
+        padding: 1rem 2rem;
         z-index:6;
-        padding:20px;
-        display:flex;
-        top:${top}%;
+       
+        margin-top:${top}%;
         left:${left}%;
-        min-width:30rem;
-        max-width:40rem;
         flex-direction:column;
         font-size:1.5rem;
         color:#FFFFFF;
