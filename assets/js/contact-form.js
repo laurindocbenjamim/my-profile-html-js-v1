@@ -6,7 +6,7 @@ let Iemail = document.querySelector('#email');
 let Isubject = document.querySelector('#subject');
 let Imessage = document.querySelector('#message');
 
-let register = (data)=>{
+let register = (thisForm,data)=>{
     fetch("https://www.iledmd.pt/api/v1/send",{
         headers: {
             "Content-Type": "application/json",
@@ -17,7 +17,8 @@ let register = (data)=>{
         
         console.log(e)
         if(e.status == 200){
-            clearFields();
+            //clearFields();
+            thisForm.reset(); 
             alert("Message sent successfull.", 6000, 'success');
         }else{
             alert("Error: "+ e.status, 6000, 'Error');
@@ -38,6 +39,7 @@ const clearFields = () =>{
 
 eventForm.addEventListener('submit', function(e){
     e.preventDefault(); 
+    let thisForm = this;
     const data = {
         name: Iname.value,
         email: Iemail.value,
@@ -54,6 +56,6 @@ eventForm.addEventListener('submit', function(e){
     }else if(data.message == ""){
         alert("The message field is required.", null, 'information');
     }else{
-        register(data);
+        register(thisForm,data);
     }
 });
