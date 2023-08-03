@@ -45,7 +45,7 @@ eventForm.addEventListener('submit', function(e){
         message: Imessage.value
     };
 
-    if(data.name != ""){
+    if(data.name == ""){
         alert("The name field is required.", null, 'information');
     }else if(data.email == ""){
         alert("The email field is required.", null, 'information');
