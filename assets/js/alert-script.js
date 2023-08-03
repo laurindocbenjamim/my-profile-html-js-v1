@@ -54,7 +54,7 @@ window.alert = function(message, timeout=null,type=null){
     cursor:pointer;
     `);
     alert.innerHTML = `
-    <h2 style="margin-bottom:.3rem;font-size:1rem;text-transform: uppercase;color:#c4c4c4;text-decoration: underline #999;">${type}</h2>
+    <h2 style="margin-bottom:.3rem;font-size:.9rem;text-transform:capitalize;font-weight:bold;color:#c4c4c4;text-decoration: underline #999;">${type}</h2>
     <span style="font-size:.8rem;margin-left:2%;"><p>${message}</p></span>
     `;
 
